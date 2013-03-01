@@ -26,12 +26,19 @@ style = doc.create_element('style', :type => 'text/css')
 style.add_child(doc.create_cdata(File.open(config.style.path).read))
 doc.at_css('svg').children.first.add_previous_sibling(style).add_previous_sibling(desc)
 
-# Dynamic attributes
-attributes = config.attributes.marshal_dump
-attributes.each_key do |attribute|
-    attributes[attribute].marshal_dump.each do |value, filter|
-        doc.search(filter).each do |element|
-            element[attribute] = value
+# Dynamic attributes modifications
+config.attributes.marshal_dump.each do |filter, actions|
+    doc.search(filter).each do |element|
+        actions.scan(/([\w\-]+)\.(set|add|remove)(?:\(([\w\-]+)\))?/).each do |attribute, function, value|
+            case function
+            when 'set'
+                element[attribute] = value
+            when 'add'
+                element[attribute] ||= ''
+                element[attribute] = "#{element[attribute]} #{value}"
+            when 'remove'
+                element.remove_attribute(attribute)
+            end
         end
     end
 end
