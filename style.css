@@ -1,0 +1,15 @@
+text {
+    display: none;
+}
+
+.ground {
+    fill: #FFF2DF;
+    stroke: #008CDF;
+    stroke-width: 0.05;
+}
+
+.water {
+    fill: #D0E5F2;
+    stroke: #008CDF;
+    stroke-width: 0.05;
+}

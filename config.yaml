@@ -1,0 +1,9 @@
+svg:
+    url:    http://upload.wikimedia.org/wikipedia/commons/5/55/Blank_map_world_gmt_%28more_simplified%29.svg
+    path:   world-map.svg
+    indent: 2
+style:
+    path: style.css
+ids:
+    path:
+        mongolia: '[d^="M1888.686,566.202l0.119-0.24l-0.119-0.121h-0.24l-0.12-0.12v-0.24"]'
