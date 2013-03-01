@@ -50,7 +50,10 @@ File.open(config.svg.path, 'w') do |file|
     doc.write(file, config.svg.indent)
 end
 
-# REXML bugfix: replace single quotes by double ones in <xml> element
+# Bug fixes
 doc = File.open(config.svg.path).read
+# REXML: replace single quotes by double ones in <xml> element
 doc.gsub!(/^<\?xml version='(\d+\.?\d*)' encoding='([\w\-]+)'\?>/, '<?xml version="\1" encoding="\2"?>')
+# Inkscape: replace xml entities
+doc.clone.scan(/<!ENTITY (\w+) "([^"]+?)">/) { |entity, value| doc.gsub!("&#{entity};", value) }
 File.open(config.svg.path, 'w') { |file| file << doc }
