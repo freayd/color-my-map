@@ -10,6 +10,9 @@ text {
 
 .water {
     fill: #D0E5F2;
+}
+
+path.water {
     stroke: #008CDF;
     stroke-width: 0.05;
 }

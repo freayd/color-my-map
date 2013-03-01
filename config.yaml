@@ -5,9 +5,12 @@ svg:
 style:
     path: style.css
 attributes:
-    'path[d^="M2101.205,1071.043l0.12-0.121h-0.36"]':                              id.set(australia)
-    'path[d^="M1694.285,743.681l0.12-0.12v-0.119h-0.12v-0.24"]':                   id.set(india)
-    'path[d^="M1888.686,566.202l0.119-0.24l-0.119-0.121h-0.24l-0.12-0.12v-0.24"]': id.set(mongolia)
-    'path[d^="M1642.925,689.202l-0.12-0.24l-0.119,0.12v0.12l-0.24,0.12h0.119"]':   id.set(nepal)
-    'path[d^="M2195.525,1181.801v0.121h-0.12l-0.12,0.121h-0.12l-0.24,0.119"]':     id.set(new-zealand)
+    'path[d^="M2101.205,1071.043l0.12-0.121h-0.36"]':                              class.add(australia)
+    'path[d^="M1694.285,743.681l0.12-0.12v-0.119h-0.12v-0.24"]':                   class.add(india)
+    'path[d^="M1888.686,566.202l0.119-0.24l-0.119-0.121h-0.24l-0.12-0.12v-0.24"]': class.add(mongolia)
+    'path[d^="M1642.925,689.202l-0.12-0.24l-0.119,0.12v0.12l-0.24,0.12h0.119"]':   class.add(nepal)
+    'path[d^="M2195.525,1181.801v0.121h-0.12l-0.12,0.121h-0.12l-0.24,0.119"]':     class.add(new-zealand)
+    'path[d^="M2228.405,1115.322v0.119h-0.24v0.121h0.12v0.119h-0.12l0.12,0.119"]': class.add(new-zealand)
     '[fill="#FFF2DF"][stroke="#008CDF"][stroke-width="0.05"]': class.add(ground);fill.remove();stroke.remove();stroke-width.remove()
+    'rect[fill="#D0E5F2"]': class.add(water);fill.remove()
+    'path[fill="#D0E5F2"][stroke="#008CDF"][stroke-width="0.05"]': class.add(water);fill.remove();stroke.remove();stroke-width.remove()
