@@ -32,9 +32,13 @@ attributes:
     'g#country-names tspan[font-family="''Myriad-Roman''"][font-size="3"]': class.add(name);font-family.remove();font-size.remove()
     'g#frame text[font-family="''ArialMT''"][font-size="13"]': font-family.remove();font-size.remove()
     # Identify countries
-    'path[d^="M2101.205,1071.043l0.12-0.121h-0.36"]':                              id.set(australia)
-    'path[d^="M1694.285,743.681l0.12-0.12v-0.119h-0.12v-0.24"]':                   id.set(india)
-    'path[d^="M1888.686,566.202l0.119-0.24l-0.119-0.121h-0.24l-0.12-0.12v-0.24"]': id.set(mongolia)
-    'path[d^="M1642.925,689.202l-0.12-0.24l-0.119,0.12v0.12l-0.24,0.12h0.119"]':   id.set(nepal)
+    'path[d^="M2101.205,1071.043l0.12-0.121h-0.36"]':                              id.set(australia);class.add(australia)
+    'path[d^="M1694.285,743.681l0.12-0.12v-0.119h-0.12v-0.24"]':                   id.set(india);class.add(india)
+    'path[d^="M1888.686,566.202l0.119-0.24l-0.119-0.121h-0.24l-0.12-0.12v-0.24"]': id.set(mongolia);class.add(mongolia)
+    'path[d^="M1642.925,689.202l-0.12-0.24l-0.119,0.12v0.12l-0.24,0.12h0.119"]':   id.set(nepal);class.add(nepal)
     'path[d^="M2195.525,1181.801v0.121h-0.12l-0.12,0.121h-0.12l-0.24,0.119"]':     id.set(south-island);class.add(new-zealand)
     'path[d^="M2228.405,1115.322v0.119h-0.24v0.121h0.12v0.119h-0.12l0.12,0.119"]': id.set(north-island);class.add(new-zealand)
+    # Identify seas and lakes
+    'path[d^="M1720.686,539.082h0.119l0.12-0.12h0.36"]':                          id.set(uvs-lake);class.add(mongolia)
+    'path[d^="M1724.045,548.322l0.12-0.24c-0.042-0.147-0.122-0.268-0.24-0.361"]': id.set(khyargas-lake);class.add(mongolia)
+    'path[d^="M1768.085,529.721l0.12-0.12v-0.239l-0.24-0.48h-0.359"]':            id.set(khovsgol-lake);class.add(mongolia)
