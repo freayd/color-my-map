@@ -1,5 +1,8 @@
 svg:
-    url:    http://upload.wikimedia.org/wikipedia/commons/5/55/Blank_map_world_gmt_%28more_simplified%29.svg
+    url:
+        - http://commons.wikimedia.org/wiki/Category:Blank_SVG_maps_of_the_world
+        - http://commons.wikimedia.org/wiki/File:Blank_map_world_gmt_%28more_simplified%29.svg
+        - http://upload.wikimedia.org/wikipedia/commons/5/55/Blank_map_world_gmt_%28more_simplified%29.svg
     path:   world-map.svg
     indent: 2
 style:
