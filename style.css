@@ -1,18 +1,42 @@
-text {
-    display: none;
+g#background rect#main-water, g#seas path {
+    fill: #D0E5F2;
 }
 
-.ground {
+g#countries path, g#inland-island path {
     fill: #FFF2DF;
     stroke: #008CDF;
     stroke-width: 0.05;
 }
 
-.water {
-    fill: #D0E5F2;
-}
-
-path.water {
+g#seas path {
     stroke: #008CDF;
     stroke-width: 0.05;
+}
+
+g#big-rivers path, g#big-rivers line, g#big-rivers polyline {
+    fill: none;
+    stroke: #0064DF;
+    stroke-width: 0.1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+g#coordinates line, g#coordinates polyline {
+    fill: none;
+    stroke: #A3A3A3;
+    stroke-width: 0.15;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+g#country-names text.name, g#country-names tspan.name {
+    font-family: 'Myriad-Roman';
+    font-size: 3px;
+}
+
+g#frame text {
+    font-family: 'ArialMT';
+    font-size: 13px;
 }
